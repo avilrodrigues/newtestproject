@@ -63,15 +63,30 @@ $(function(){
   $("#header").load("header.html"); 
   $("#content").load("content.html");  
   $("#footer").load("footer.html"); 
-/*
+  
 $('.dropdown-toggle').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
 
     return false;
 });
-*/
 
+
+
+
+});
+
+$(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
 }); 
 </script>
    </body>
