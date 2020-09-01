@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="content-Type" content="text/html; charset=UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="generator" content="Source Themes Academia 4.3.1">
@@ -9,16 +9,22 @@
       <meta name="author" content="Avil Rodrigues">
       <meta name="description" content="Data Analyst">
       <meta name="theme-color" content="#163A84">
-      <link rel="stylesheet" href="./css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-      <link rel="stylesheet" href="./css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-      <link rel="stylesheet" href="./css/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-      <link rel="stylesheet" href="./css/github.min.css" crossorigin="anonymous" title="hl-light">
-      <link rel="stylesheet" href="./css/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled="">
-      <link rel="stylesheet/scss" type="text/css" href="./css/custom.css">
+	  <link rel="alternate" hreflang="en-us" href="https://avilrodrigues.github.io/website/">
+	  
+	<link rel="stylesheet" href="./css/academicons.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/all.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/jquery.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/github.css" crossorigin="anonymous" title="hl-light">
+    <link rel="stylesheet" href="./css/dracula.css" crossorigin="anonymous" title="hl-dark" disabled="">
+	<link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/academia_002.css">
+    <link rel="stylesheet" href="./css/academia.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-      <link rel="stylesheet" href="./css/academia.min.e1efd43236f1a442efecd899a6192523.css">
-      <link rel="stylesheet" href="./css/academia.a75a9b8a9a725a2157c0c5b929a3d18b.css">
       <link rel="icon" type="image/png" href="./img/logo1.jpg">
+	    <link rel="canonical" href="https://bobbymuljono.com/">
+	  
+	  
+	  
       <meta property="twitter:card" content="summary_large_image">
       <meta property="og:site_name" content="Avil Rodrigues">
       <meta property="og:url" content="">
@@ -28,6 +34,7 @@
       <meta property="twitter:image" content="./img/user-2.jpg">
       <meta property="og:locale" content="en-us">
       <meta property="og:updated_time" content="2020-03-12T00:00:00+00:00">
+	  
       <title>Avil Rodrigues</title>
    </head>
    
@@ -39,47 +46,32 @@
 	<div id="footer"></div>
 	  
       <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="./js/imagesloaded.pkgd.min.js.download" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="./js/isotope.pkgd.min.js.download" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="./js/jquery.fancybox.min.js.download" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-      <script src="./js/highlight.min.js.download" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
-      <script src="./js/academia.min.281fa180ccfa1769ea3c7dd430814861.js.download"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+	   
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	  
+      <script src="./js/imagesloaded.js"  crossorigin="anonymous"></script>
+      <script src="./js/isotope.js"  crossorigin="anonymous"></script>
+    <!--  <script src="./js/jquery_002.js"  crossorigin="anonymous"></script>-->
+      <script src="./js/highlight.js"  crossorigin="anonymous"></script>
+	  <script>hljs.initHighlightingOnLoad();</script>
 	  <script>  
 
 	  
 $(function(){ 
 
+  $("#header").load("header.html"); 
+  $("#content").load("content.html");  
+  $("#footer").load("footer.html"); 
+/*
 $('.dropdown-toggle').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
 
     return false;
 });
+*/
 
-
-$('body').scrollspy({
-        target: "#navbar-main",
-        offset: 70
-    });
-
-    // Navbar fade
-   changeNavbar();
-
-    $(window).scroll(function () {
-        changeNavbar();
-    });
-
-    function changeNavbar() {
-        var navbar = $("#navbar-main");
-        if ($(this).scrollTop() >= 100) {
-            navbar.addClass("bg-light").removeClass("bg-transparent");
-        } else if ($(this).scrollTop() < 100) {
-            navbar.removeClass("bg-light").addClass("bg-transparent");
-        }
-    }
-  $("#header").load("header.html"); 
-  $("#content").load("content.html");  
-  $("#footer").load("footer.html"); 
 }); 
 </script>
    </body>
